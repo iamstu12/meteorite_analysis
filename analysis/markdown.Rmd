@@ -3,12 +3,12 @@ title: "Meteorite Analysis"
 author: "Stuart McColl"
 date: "26/12/2020"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     df_print: paged
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: yes
   word_document:
     toc: yes
 ---
