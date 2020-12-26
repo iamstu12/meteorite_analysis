@@ -2,24 +2,30 @@
 title: "Meteorite Analysis"
 author: "Stuart McColl"
 date: "26/12/2020"
-output: html_document
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float: yes
+  word_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# The .Rmd file
 
-#### In the .Rmd file please do the following.
-
-## 1. Read the cleaned data into R.
+# 1. Read the cleaned data into R.
 
 ```{r, warning=FALSE, message=FALSE}
 
 library(tidyverse)
-library(kableExtra)
+library(rmarkdown)
 library(pander)
+library(latexpdf)
 
 meteorite_clean <- read_csv("/Users/Natifu/github_projects/meteorite_analysis/clean_data/meteorite_clean")
 
@@ -27,7 +33,7 @@ meteorite_clean <- read_csv("/Users/Natifu/github_projects/meteorite_analysis/cl
 
 <br>
 
-## 2. Find the names and years found for the 10 largest meteorites in the data.
+# 2. Find the names and years found for the 10 largest meteorites in the data.
 
 ```{r}
 
@@ -41,7 +47,7 @@ meteorite_clean %>%
 
 <br>
 
-## 3. Find the average mass of meteorites that were recorded falling, vs. those which were just found.
+# 3. Find the average mass of meteorites that were recorded falling, vs. those which were just found.
 
 ```{r, warning=FALSE, message=FALSE}
 
@@ -54,7 +60,7 @@ meteorite_clean %>%
 
 <br>
 
-## 4. Find the number of meteorites in each year, for every year since 2000.
+# 4. Find the number of meteorites in each year, for every year since 2000.
 
 ```{r, warning=FALSE, message=FALSE}
 
@@ -68,7 +74,7 @@ meteorite_clean %>%
 
 <br>
 
-## 5. Visualise results
+# 5. Visualise results
 
 ```{r, warning=FALSE, message=FALSE}
 
