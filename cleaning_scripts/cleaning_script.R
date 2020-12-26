@@ -23,7 +23,7 @@ meteorite_clean <- meteorite_raw %>%
     lat_long = "GeoLocation"
   )
 
-# Question 3 --------------------------------------------------------------------
+# Question 3 -------------------------------------------------------------------
 
 # Split in column GeoLocation into latitude and longitude, the new latitude 
 # and longitude columns should be numeric.
